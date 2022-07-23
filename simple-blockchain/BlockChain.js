@@ -1,8 +1,13 @@
 import { createHash } from "node:crypto";
 
 export default class BlockChain {
-  constructor() {
+  constructor(difficulty = 5) {
     this.chain = [];
+    this.difficulty = difficulty;
+  }
+
+  getChain() {
+    return this.chain;
   }
 
   isValidHashDifficulty(hash, difficulty) {
@@ -25,7 +30,7 @@ export default class BlockChain {
 
     let hash = createHash("sha256").update(JSON.stringify(block)).digest("hex");
 
-    while (!this.isValidHashDifficulty(hash, 4)) {
+    while (!this.isValidHashDifficulty(hash, this.difficulty)) {
       nonce++;
       block.nonce = nonce;
       hash = createHash("sha256").update(JSON.stringify(block)).digest("hex");

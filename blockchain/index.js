@@ -1,6 +1,6 @@
 import BlockChain from "./BlockChain.js";
 
-const difficulty = Number(process.argv[2]) || 4;
+const difficulty = Number(process.argv[2]) || 5;
 const blockChain = new BlockChain(difficulty);
 
 const blockNumber = Number(process.argv[3]) || 10;

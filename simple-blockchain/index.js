@@ -23,10 +23,12 @@ const chain = [
   },
 ];
 
-const blockChain = new BlockChain();
+const difficulty = 5;
+const blockChain = new BlockChain(difficulty);
 
 for (let block of chain) {
   blockChain.addBlock(block);
 }
 
-console.log(blockChain.chain);
+console.log("\n--- GENERATED CHAIN ---\n");
+console.log(blockChain.getChain());
