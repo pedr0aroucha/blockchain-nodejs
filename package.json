@@ -1,0 +1,15 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "A simple blockchain by @pedr0aroucha using nodejs",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "blockchain",
+    "nodejs"
+  ],
+  "author": "@pedr0aroucha",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module"
+}
